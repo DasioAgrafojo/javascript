@@ -1,14 +1,13 @@
 <html>
     <head>
-        <title>Ejercicio 4</title>
+        <title>Ejercicio 5</title>
     </head>
     <body>
         <script>
-            var nombre = ["Dasio","Marcos","Pedro"];
-            var seleccion;
+            var frase = window.prompt("Escribe una frase");
+            var fraseSeparada = frase.split(" ");
 
-            seleccion = prompt("Tengo " + nombre.length + " nombres", " Dame un número "); //prompt ("Mensaje","Selección por defecto")
-            document.write("Has escogido el número " + seleccion + " que es " + nombre[seleccion-1]);
+            document.write("La frase tiene " + frase.length + " caracteres y " + (fraseSeparada.length-1) + " espacios.");
         </script>
     </body>
 </html>
