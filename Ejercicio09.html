@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Ejercicio 9</title>
+    </head>
+    <body>
+        <script>
+            const PASSWORD = "pepe";
+            const EXIT = "salir"
+            var seleccion = "";
+
+            while(seleccion != PASSWORD && seleccion != EXIT){
+                seleccion = prompt("Dame un nombre",""); //prompt ("Mensaje","Selección por defecto")
+                document.write("<h2>incorrecto</h2>")
+                }
+            
+            if (seleccion == PASSWORD)
+            document.write("<h1>HAS ACERTADO!</h1>")
+                
+        </script>
+    </body>
+</html>
