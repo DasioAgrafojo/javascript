@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Tarefa 2 Medios</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        var base; 
+        var radio;
+        var altura; 
+        var volumenEsfera;
+        var volumenCubo; 
+        var volumenCilindro; 
+
+        function calculaVolumenCubo() { 
+            base =prompt("Introduce base: ");
+            base = parseFloat(base);
+            volumenCubo = base * base * base;
+            return volumenCubo; 
+        }
+
+        function calculaVolumenCilindro() {
+            radio = prompt("Introduce radio: ");
+            radio = parseFloat(radio);
+            altura = prompt("Introduce altura: ");
+            altura = parseFloat(altura);
+            volumenCilindro = 2 * Math.PI * radio * (radio+altura);
+            return volumenCilindro;
+        }
+
+        function calculaVolumenEsfera() {
+            radio = prompt("Introduce radio: ");
+            radio = parseFloat(radio);
+            volumenEsfera =  ((4/3) * Math.PI * (radio*radio*radio));
+            return volumenEsfera;
+        }
+
+        function menu() {
+            console.log(" Calcular Volumen  ");
+            console.log("==================");
+            console.log("1. Cubo"); 
+            console.log("2. Esfera");
+            console.log("3. Cilindro");  
+            console.log("Elige opoción: ");
+                opcion = prompt("Tu opción es: ");
+                switch(opcion) {
+                    case "1": 
+                        calculaVolumenCubo();
+                        console.log("Volumen: " + volumenCubo.toFixed(2));
+                        break; 
+                    case "2": 
+                        calculaVolumenEsfera(); 
+                        console.log("Volumen: " + volumenEsfera.toFixed(2));
+                        break;
+                    case "3":
+                        calculaVolumenCilindro();
+                        console.log("Volumen: " + volumenCilindro.toFixed(2));
+                        break;
+                    default: 
+                        console.log("Opción erronea.");     
+                 } //while(opcion >=1 || opcion <=3);
+
+        }
+
+        menu();
+
+        </script>
+    </body>
+
+</html>

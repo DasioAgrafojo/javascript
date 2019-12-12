@@ -1,0 +1,31 @@
+  
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ej2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log("Hello");
+            var a = ["pepe","juan","manuel","david"];
+
+            var cadena = prompt('Añade un nombre: ');
+            a.push(cadena);
+
+            var n=0;
+
+            while(n<5){
+console.log(n + " - "+ a[n]);
+n++;
+            }
+
+            var r = Math.floor(Math.random() * 5) //o floor redonde a un enteiro
+            setInterval(() => {  
+                console.log(a[r]);
+                r = Math.floor(Math.random() * 5) 
+                }, 5000);
+            
+        </script>
+    </body>
+</html>

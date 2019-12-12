@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Tarefa3 Básicos</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+var cadena = prompt('Dame una cadena')
+
+//Reemplazar caracter por otro
+console.log(cadena.replace(/ /g,"*")); 
+
+//Contar palabras del texto.
+var wordCount = cadena.trim().replace(/\s+/gi, ' ').split(' ').length;
+console.log(wordCount);
+ 
+//Obtener la longitud del texto.
+var totalChars = cadena.length;
+console.log(totalChars);
+
+//Obtener total de caracteres excluyendo espacios del inicio o final del texto.
+/*var charCount = cadena.trim().length;
+console.log(charCount);*/
+
+
+        </script>
+    </body>
+
+</html>

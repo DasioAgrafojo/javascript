@@ -1,0 +1,21 @@
+  
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log("Hello");
+            var a = ["pepe","juan","manuel","david"];
+            
+            var r = Math.floor(Math.random() * 4) //o floor redonde a un enteiro
+            setInterval(() => {  
+                console.log(a[r]);
+                r = Math.floor(Math.random() * 4) 
+                }, 5000);
+            
+        </script>
+    </body>
+</html>

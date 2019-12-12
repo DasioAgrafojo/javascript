@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Tarefa3 Básicos</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+         function checkMail(a) {
+
+            var re = /[a-z]+@[a-z]+\.[a-z]{2,3}/;
+
+            if(a.match(re)) {
+                alert("Dirección de correo correcta!");
+            } else {
+                alert("Dirección no válida!")
+            }
+
+        }
+
+
+          function checkDni(a) {
+
+            var re = /[0-9]{8}[A-Z]{1}/; 
+
+            if (a.match(re)) {
+                alert("DNI válido");
+            } else {
+                alert("DNI no válido");
+            }
+
+        }
+
+        function menu() {
+            console.log("      Menú        ");
+            console.log("==================");
+            console.log("1. Comprueba email"); 
+            console.log("2. Comprueba DNI"); 
+            console.log("Elige opoción: ");
+                opcion = prompt("Tu opción es: ");
+                switch(opcion) {
+                    case "1": 
+                        checkMail(prompt("Introduce dirección de correo electrónico: "));
+                        break; 
+                    case "2": 
+                        checkDni(prompt("Introduce DNI: "));
+                 } while(opcion >=1 || opcion <=2);
+
+        }
+      
+        
+        menu();
+
+       /* checkMail(prompt("Introduce dirección de correo electrónico: "))
+
+        checkDni(promp("Introduce DNI: "))
+*/
+        </script>
+    </body>
+
+</html>

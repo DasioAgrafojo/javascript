@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Tarefa CALCULADORA Medios</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var operand; 
+            var operand2; 
+            var result;
+            
+            function sumar() {
+                operand = prompt("Introduce primer operando: ");
+                operand = parseFloat(operand);
+                operand2 = prompt("Introduce segundo operando: ");
+                operand2 = parseFloat(operand2);
+                result = operand + operand2;
+                return result;
+            }
+
+            function restar() {
+                operand = prompt("Introduce primer operando: ");
+                operand = parseFloat(operand);
+                operand2 = prompt("Introduce segundo operando: ");
+                operand2 = parseFloat(operand2);
+                result = operand - operand2;
+                return result;
+            }
+
+            function multiplicar() {
+                operand = prompt("Introduce primer operando: ");
+                operand = parseFloat(operand);
+                operand2 = prompt("Introduce segundo operando: ");
+                operand2 = parseFloat(operand2);
+                result = operand * operand2;
+                return result;
+            }
+
+            function dividir() {
+                operand = prompt("Introduce primer operando: ");
+                operand = parseFloat(operand);
+                operand2 = prompt("Introduce segundo operando: ");
+                operand2 = parseFloat(operand2);
+                try{
+                    result = operand / operand2;
+                } catch(ArithmeticException) {
+                    console.log("Error en la operación!");
+                }
+                return result;
+                
+            }
+            
+
+            function calculadora() {
+                console.log(" ** Calculadora **  ");
+                console.log("===================");
+                console.log("1. Sumar"); 
+                console.log("2. Restar");
+                console.log("3. Multiplicar");
+                console.log("4. Dividir");  
+                console.log("Elige opoción: ");
+                opcion = prompt("Tu opción es: ");
+                    switch(opcion) {
+                        case "1": 
+                            sumar();
+                            console.log("Resultado: " + result);
+                            break; 
+                        case "2": 
+                            restar();
+                            console.log("Resultado: " + result.toFixed(2));
+                            break;
+                        case "3":
+                            multiplicar();
+                            console.log("Resultado: " + result.toFixed(2));
+                            break;
+                        case "4":
+                            dividir();
+                            console.log("Resultado: " + result.toFixed(2));    
+                        default: 
+                            console.log("Realizar esta división no es posible!!"); 
+                            break;  
+                     } //while(opcion >=1 || opcion <=4);
+
+            }
+
+            calculadora();
+
+        </script>
+    </body>
+
+</html>
